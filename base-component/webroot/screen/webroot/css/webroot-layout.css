@@ -38,8 +38,10 @@ div.error span { color: red; }
 
 strong, .text-strong { font-weight: bold; }
 tt, pre, pre code { font-family: "Courier New", Courier, monospace; }
-p, pre { white-space: pre-line; word-wrap: normal; word-break: normal; }
-.bg-dark pre { background-color: #3a3a3a; color: #EEE; border-color: #222; }
+/* Khoi change because of quill editor has conflict::: white-space: pre;*/
+p, pre { white-space: pre-wrap; word-wrap: normal; word-break: normal; }
+/*p, pre { white-space: pre-line; word-wrap: normal; word-break: normal; }*/
+.bg-dark pre { background-color: #3a3a3a; color: rgb(241, 244, 255); border-color: #222; }
 pre.pre-plain { white-space: pre; }
 p { margin: 0 0 8px 0; }
 .padding-top-8 { padding-top: 8px; }
@@ -96,7 +98,7 @@ td.form-list-sub-row-cell { padding: 0 !important; }
 /* ======================= Handy Styles ======================= */
 
 ul.float-box { display: inline-block; list-style: none outside none; margin: 0 0 -8px 0; padding: 0; }
-ul.float-box li { display: inline-block; line-height: 18px; margin: 0 8px 8px 0; padding: 8px; float: left; }
+ul.float-box li { display: inline-block; line-height: 18px; margin: 1px 8px 8px 1px; padding: 20px; float: left;}
 ul.float-box li.box-narrow { max-width: 300px; }
 
 ul.float-plain { display: inline-block; list-style: none outside none; margin: 0 0 -8px 0; padding: 0; }
@@ -141,11 +143,16 @@ nav.form-list-nav>.btn { display: inline-block; margin: 6px 6px 0 6px; float: le
 nav.form-list-nav>span.select2-container { float: left; margin: 6px 0 6px 0; min-width: 100px; max-width: 160px; }
 
 /* Extend the Bootstrap panel, add support for a panel-toolbar, treat h5 and span just like bootstrap panel-title */
-.panel .panel-heading { position: relative; }
+.panel .panel-heading { position: relative; background-color: rgb(241, 244, 255);}
 .panel .panel-heading .panel-toolbar { position: absolute; top: 0; right: 0; }
 .panel .panel-toolbar .label { display: inline-block; margin: 4px 4px 4px 0; }
 .panel .panel-heading>h5, .panel .panel-heading>span { display: inline-block; margin-top: 0; margin-bottom: 0; font-size: 16px; }
-.panel, .panel .panel-body { background: transparent; }
+.panel, .panel .panel-body { background: transparent; 
+	    transition: box-shadow .25s;
+        border-radius: 5px;
+    	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);}
 .panel-body>table.table { margin: -15px; width: calc(100% + 30px); max-width: none; }
 
 .btn { margin: 4px 4px 4px 0; }
@@ -161,7 +168,10 @@ nav.form-list-nav>span.select2-container { float: left; margin: 6px 0 6px 0; min
 /* Variations on Bootstrap default table styles */
 .table>thead>tr>th { vertical-align: top; }
 .table>tbody>tr>td { vertical-align: middle; }
-.table { margin-bottom: 8px; }
+.table { margin-bottom: 8px; 
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.498039);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.498039);
+	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.498039);}
 
 .well>.list-inline { margin-bottom: 0; }
 
@@ -191,7 +201,10 @@ a.jstree-anchor { white-space: normal; }
 
 /* ======================= Screen-specific ======================= */
 
-.app-list-link { font-size: 1.5em; display: block; width: 320px; margin: 8px auto 8px auto; }
+/*.app-list-link { font-size: 1.5em; display: block; width: 320px; margin: 8px auto 8px auto; }*/
+.app-list-link { font-size: 1.5em; width: 320px; margin: 8px auto 8px auto;}
+/* Khoi changes */
+.app4factory-design{height: 120px; color: black; text-align: center; background-color: white}
 
 .ScreenTreeNested { margin: 4px 0 4px 12px; padding: 0 0 0 12px; border-left: 1px dashed lightgrey; }
 
