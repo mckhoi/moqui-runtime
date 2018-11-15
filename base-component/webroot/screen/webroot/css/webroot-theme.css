@@ -28,15 +28,15 @@ div.message span { font-size: 1em; }
 div.error span { color: red; }
 
 tt, pre, pre code, .text-mono { font-family: monospace,monospace; font-size: 1em; }
-.bg-dark pre { background-color: #3a3a3a; color: #EEE; border-color: #222; }
-.bg-dark .well { background-color: #303030; color: #EEE; border-color: #222; }
+.bg-dark pre { background-color: #3a3a3a; color: rgb(241, 244, 255); border-color: #222; }
+.bg-dark .well { background-color: #303030; color: rgb(241, 244, 255); border-color: #222; }
 
 /* .button-plain is for hidden forms with a button element but we want it to look like an anchor */
 button.button-plain { border: 0; padding: 0; background: transparent; margin: 0; color: #428bca; }
 button.button-plain:hover { text-decoration: underline; }
 
 input:required:invalid, input:invalid, textarea:invalid { background-color: #FEE; }
-input:focus:valid, textarea:focus:valid { background-color: #EEE; }
+input:focus:valid, textarea:focus:valid { background-color: rgb(241, 244, 255); }
 
 /* simple CSS spinner */
 @keyframes spin { to { transform: rotate(1turn); } }
@@ -45,7 +45,7 @@ input:focus:valid, textarea:focus:valid { background-color: #EEE; }
 .spinner.small { font-size: 6px; } .spinner.large { font-size: 18px; }
 .spinner:before, .spinner:after, .spinner > div:before, .spinner > div:after { content: ''; position: absolute;
     top: 0; left: 2.25em; /* (container width - part width)/2  */ width: 0.5em; height: 1.5em; border-radius: 0.2em;
-    background: #eee; box-shadow: 0 3.5em #eee; /* container height - part height */ transform-origin: 50% 2.5em; /* container height / 2 */ }
+    background: rgb(241, 244, 255); box-shadow: 0 3.5em rgb(241, 244, 255); /* container height - part height */ transform-origin: 50% 2.5em; /* container height / 2 */ }
 .spinner:before { background: #555; } .spinner:after { transform: rotate(-45deg); background: #777; }
 .spinner > div:before { transform: rotate(-90deg); background: #999; }
 .spinner > div:after { transform: rotate(-135deg); background: #bbb; }
@@ -56,11 +56,11 @@ input:focus:valid, textarea:focus:valid { background-color: #EEE; }
 .form-order-by a.active { color: red; }
 .form-order-by a.active:hover { color: darkred; }
 
-nav.form-list-nav, table.table>thead>tr>th { background: #EEE; }
+nav.form-list-nav, table.table>thead>tr>th { background: rgb(241, 244, 255); }
 .form-list-sub-rows table.table>thead>tr>th { background: #D8D8D8; }
 .bg-dark nav.form-list-nav, .bg-dark table.table>thead>tr>th { background: #222; }
 .bg-dark .form-list-sub-rows table.table>thead>tr>th { background: #383838; }
-.bg-dark .modal-content nav.form-list-nav, .bg-dark .modal-content table.table>thead>tr>th { background: #EEE; }
+.bg-dark .modal-content nav.form-list-nav, .bg-dark .modal-content table.table>thead>tr>th { background: rgb(241, 244, 255); }
 .bg-dark .modal-content .form-list-sub-rows table.table>thead>tr>th { background: #D8D8D8; }
 .form-list-sub-rows td { background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)); }
 .bg-dark .form-list-sub-rows td { background: linear-gradient(rgba(192,192,192,0.1),rgba(192,192,192,0.1)); }
@@ -72,16 +72,19 @@ label.is-changed { text-decoration: underline; text-decoration-color: #0097cf; t
 
 /* ======================= Handy Styles ======================= */
 
-ul.float-box li { background: #EEEEEE; box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC;
-    -webkit-box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC; }
-ul.float-box li.active { box-shadow: 0 0 0 1px #337ab7 inset, 0 0 0 1px #CCCCCC;
-    -webkit-box-shadow: 0 0 0 1px #337ab7 inset, 0 0 0 1px #CCCCCC; }
-.bg-dark ul.float-box li { background: #333; box-shadow: 0 0 0 1px #337ab7 inset, 0 0 0 1px #333;
+ul.float-box li { background: #FFFFFF;
+    transition: box-shadow .25s;
+    border-radius: 5px;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);}
+	
+.bg-dark ul.float-box li { background: #333; box-shadow: 0 0 0 1px #080808 inset, 0 0 0 1px #333;
     -webkit-box-shadow: 0 0 0 1px #080808 inset, 0 0 0 1px #333; }
 .bg-dark ul.float-box li.active { box-shadow: 0 0 0 1px #080808 inset, 0 0 0 1px #333;
     -webkit-box-shadow: 0 0 0 1px #337ab7 inset, 0 0 0 1px #333; }
 
-.bg-light .shaded-area { background: #EEE; box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCC;
+.bg-light .shaded-area { background: rgb(241, 244, 255); box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCC;
     -webkit-box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCC; }
 .bg-dark .shaded-area { background: #333; box-shadow: 0 0 0 1px #080808 inset, 0 0 0 1px #333;
     -webkit-box-shadow: 0 0 0 1px #080808 inset, 0 0 0 1px #333;}
@@ -129,7 +132,7 @@ body.test #content { background: #f0fff0; }
 .bg-dark pre.editable-label { background-color: #3a3a3a; border-color: #222; }
 .editable-label { color: rgb(66, 139, 202); }
 form.editable-form button { background: white; color: #333; border: 1px solid; border-color: #ddd #bbb #999; padding: 2px 4px 2px 4px; margin: 2px; outline: 0; }
-.bg-dark form.editable-form button { background: #333; color: #EEE; }
+.bg-dark form.editable-form button { background: #333; color: rgb(241, 244, 255); }
 .bg-dark form.editable-form textarea { background-color: #3a3a3a; border-color: #222; }
 
 /* invert images in dark theme, good for black and white, may not be good otherwise so use img.invertible class */
